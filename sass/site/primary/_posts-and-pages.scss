@@ -1,0 +1,142 @@
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0;;
+}
+
+.byline,
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	@include rem(margin, 15px 0 0);
+}
+
+.page-links {
+	clear: both;
+	@include rem(margin, 0 0 15px);
+}
+
+
+/*============================
+=            HOME            =
+============================*/
+
+.home {
+
+	section {
+		margin-bottom: 30px;
+	}
+
+	img {
+		display: block;
+	}
+
+	.laptop {
+		position: relative;
+
+		.glow {
+			position: absolute;
+			top: 0;
+			left: 0;
+		
+			img {
+				animation: flicker;
+				animation-duration: 3s;
+				animation-timing-function: linear;
+				animation-iteration-count: infinite;
+
+				-webkit-animation: flicker;
+				-webkit-animation-duration: 3s;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-iteration-count: infinite;
+			}
+		}
+	}
+
+	.lightsoff {
+		position: relative;
+
+		.lightson {
+			position: absolute;
+			top: 0;
+			opacity: 0;
+
+			&.show {
+				animation: flickeron;
+				animation-duration: 60ms;
+				animation-timing-function: linear;
+				animation-iteration-count: 1;
+
+				-webkit-animation: flickeron;
+				-webkit-animation-duration: 600ms;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-iteration-count: 1;
+				opacity: 1;
+			}
+		}
+	}
+
+	.lightbulb {
+		position: relative;
+
+		.lightbulbon {
+			position: absolute;
+			top: 0;
+			opacity: 0;
+
+			&.show {
+				animation: flickeron-alt;
+				animation-duration: 60ms;
+				animation-timing-function: linear;
+				animation-iteration-count: 1;
+
+				-webkit-animation: flickeron-alt;
+				-webkit-animation-duration: 600ms;
+				-webkit-animation-timing-function: linear;
+				-webkit-animation-iteration-count: 1;
+				opacity: 1;
+			}
+		}
+
+		.lightbulbglow {
+			position: absolute;
+			top: 0;
+			opacity: 0;
+
+			-webkit-transition: opacity 2s ease-in;
+			-moz-transition: opacity 2s ease-in;
+			-ms-transition: opacity 2s ease-in;
+			-o-transition: opacity 2s ease-in;
+			transition: opacity 2s ease-in;
+
+			&.show {
+				opacity: 1;
+			}
+		}
+	}
+
+	.switchbox {
+		.switch {
+
+		}
+	}
+
+	a.touchme {
+		position: absolute;
+		width: 100%;
+		height: 50%;
+		top: 0;
+	}
+}
+
